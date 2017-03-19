@@ -13,20 +13,19 @@ MAINTAINER Simon Emms <simon@slashdevslashnull.it>
 WORKDIR /opt/app
 ADD . /opt/app
 
-USER node
-
 # Environment variables
-ENV DG_LOGGING_STREAMS_STDOUT_ACTIVE=true
-ENV DG_LOGGING_STREAMS_STDOUT_LEVEL=info
-
-ENV DG_SERVER_PORT=9999
-ENV DB_SERVER_PRETTY_OUTPUT=false
+ENV GHOST_LOCAL_PORT=2368
+ENV GHOST_SQLITE_DB=/opt/app/content/data/ghost.db
+ENV GHOST_SQLITE_DEBUG=true
+ENV GHOST_URL="http://localhost:9999"
 
 # Install the dependencies
+RUN npm install
+
+USER node
 
 # Expose the port
-EXPOSE 9999
-EXPOSE 5858
+EXPOSE 2368
 
 # Run run run
-CMD npm start | ./node_modules/.bin/bunyan
+CMD npm start
