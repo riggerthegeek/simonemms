@@ -14,7 +14,7 @@ WORKDIR /opt/app
 ADD . /opt/app
 
 # Environment variables
-ENV GHOST_LOCAL_PORT=2368
+ENV GHOST_LOCAL_PORT=9999
 ENV GHOST_SQLITE_DB=/opt/app/content/data/ghost.db
 ENV GHOST_SQLITE_DEBUG=true
 ENV GHOST_URL="http://localhost:9999"
@@ -25,7 +25,7 @@ RUN npm install
 USER node
 
 # Expose the port
-EXPOSE 2368
+EXPOSE 9999
 
 # Run run run
 CMD npm start
