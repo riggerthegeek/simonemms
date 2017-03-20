@@ -1849,21 +1849,21 @@
 
 /* List */
 
-	ul.default {
+	article section ul, ul.default {
 		list-style: disc;
 		padding-left: 1em;
 	}
 
-		ul.default li {
+		article section ul li, ul.default li {
 			padding-left: 0.5em;
 		}
 
-	ol.default {
+	article section ol, ol.default {
 		list-style: decimal;
 		padding-left: 1.25em;
 	}
 
-		ol.default li {
+		article section ol li, ol.default li {
 			padding-left: 0.25em;
 		}
 

@@ -82,6 +82,9 @@
 					$('#titleBar, #sidebar, #main')
 						.css('transition', 'none');
 
+            // Configure HighlightJS
+            hljs.initHighlightingOnLoad();
+
 	});
 
 })(jQuery);

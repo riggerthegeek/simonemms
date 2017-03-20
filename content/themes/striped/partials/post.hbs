@@ -42,19 +42,20 @@
         <img src="{{ image }}" alt="{{ title }}" />
     </a>
 
-    <section class="post-excerpt">
-        {{#if fullStory}}
-            {{#post}}
-                {{content}}
-            {{/post}}
-        {{/if}}
-        {{#unless fullStory}}
+
+    {{#if fullStory}}
+        <section class="content">
+            <div>{{ content }}</div>
+        </section>
+    {{/if}}
+    {{#unless fullStory}}
+        <section class="post-excerpt">
             <div>{{ excerpt words="100" }}&hellip;</div>
             <a class="button" href="{{ url }}">
                 Read More
                 <i class="fa fa-chevron-right"></i>
             </a>
-        {{/unless}}
-    </section>
+        </section>
+    {{/unless}}
 
 </article>
