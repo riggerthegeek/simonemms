@@ -3,10 +3,14 @@
 
 // Ghost runs in `development` mode by default. Full documentation can be found at http://support.ghost.org/config/
 
-var path = require('path'),
-    config;
+const path = require('path');
 
-config = {
+const hbs = require('express-hbs');
+const pagination = require('ghost-pagination');
+
+hbs.registerHelper('paginate', pagination);
+
+const config = {
     // ### Development **(default)**
     development: {
         // The url to use when providing links to the site, E.g. in RSS and email.

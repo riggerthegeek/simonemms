@@ -1,0 +1,34 @@
+<div class="pagination">
+
+    {{#if prev}}
+        <a href="{{ page_url prev }}" class="button previous">Previous Page</a>
+    {{/if}}
+
+    <div class="pages">
+        {{#paginate page pages limit="5"}}
+            {{#if first}}
+                <a href="{{ page_url n}}"{{#if active}} class="active"{{/if}}>{{ n }}</a>
+                {{#if ellipsis}}
+                    <span>&hellip;</span>
+                {{/if}}
+            {{/if}}
+
+            {{#if middle}}
+                <a href="{{ page_url n}}"{{#if active}} class="active"{{/if}}>{{ n }}</a>
+            {{/if}}
+
+            {{#if last}}
+                {{#if ellipsis}}
+                    <span>&hellip;</span>
+                {{/if}}
+                <a href="{{ page_url n}}"{{#if active}} class="active"{{/if}}>{{ n }}</a>
+            {{/if}}
+        {{/paginate}}
+    </div>
+
+
+    {{#if next}}
+        <a href="{{ page_url next }}" class="button next">Next Page</a>
+    {{/if}}
+
+</div>
