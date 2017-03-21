@@ -2387,6 +2387,13 @@
 			width: 100%;
 		}
 
+        input[type="submit"].small,
+        input[type="reset"].small,
+        input[type="button"].small,
+        .button.short {
+            min-width: 0;
+        }
+
 		input[type="submit"].small,
 		input[type="reset"].small,
 		input[type="button"].small,
@@ -2587,6 +2594,10 @@
 				margin-top: 0;
 				padding-top: 0;
 			}
+
+            #main section .content {
+                margin-bottom: 2.25em;
+            }
 
 /* Poptrox */
 
@@ -3125,3 +3136,24 @@
 			}
 
 	}
+
+a {
+    outline: none;
+}
+
+.no-underline {
+    border: 0;
+}
+
+
+
+/* Pagination */
+.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0 -10px;
+}
+
+.pagination > li {
+    display: inline;
+}

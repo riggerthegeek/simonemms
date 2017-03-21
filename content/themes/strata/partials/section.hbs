@@ -1,0 +1,68 @@
+<section>
+
+    <header class="major">
+        <h2>
+            {{#if section_url}}
+                <a href="{{ section_url }}">
+            {{/if}}
+
+                {{ section_title }}
+
+            {{#if section_url}}
+                </a>
+            {{/if}}
+        </h2>
+
+        {{#if section_date}}
+            <span class="date">{{ section_date }}</span>
+        {{/if}}
+    </header>
+
+    {{# if section_img }}
+        <div class="content">
+            {{#if section_url}}
+                <a href="{{ section_url }}" class="no-underline">
+            {{/if}}
+                <img src="{{ section_img }}" />
+            {{#if section_url}}
+                </a>
+            {{/if}}
+        </div>
+    {{/if}}
+
+    <div class="content">
+        {{ section_body }}{{#if section_postbody}}{{{ section_postbody }}}{{/if}}
+    </div>
+
+    {{#if section_button}}
+        <ul class="actions">
+            <li>
+                <a href="{{ section_url }}" class="button">
+                    {{ section_button }}
+                </a>
+            </li>
+        </ul>
+    {{/if}}
+
+
+
+    {{#if section_comments}}
+        <div id="disqus_thread"></div>
+        <script>
+
+            var disqus_config = function () {
+                this.page.url = "{{ url absolute=true }}"; // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = "{{ url }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://riggerthegeek.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    {{/if}}
+
+</section>

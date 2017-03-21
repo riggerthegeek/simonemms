@@ -1,0 +1,15 @@
+{{!< default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+{{!-- The tag below includes the post loop - partials/loop.hbs --}}
+{{#post}}
+    {{> "section"
+        section_title=(title)
+        section_img=(image)
+        section_body=(content)
+        section_date=(date format='Do MMMM YYYY')
+        section_comments=true
+    }}
+{{/post}}
+
+{{> "contact"}}

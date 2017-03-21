@@ -48,6 +48,10 @@
             </div>
         </header>
 
+        <main id="main">
+            {{{ body }}}
+        </main>
+
         <footer id="footer">
             <div class="inner">
                 <ul class="icons">
@@ -98,7 +102,7 @@
                 </ul>
                 <ul class="copyright">
                     <li>
-                        &copy; {{ @blog.title }}
+                        &copy; 2015 - {{date format='YYYY'}} {{ @blog.title }}
                     </li>
                     <li>
                         Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a>

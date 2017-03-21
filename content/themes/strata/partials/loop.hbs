@@ -1,0 +1,13 @@
+{{#foreach posts}}
+    {{> "section"
+        section_title=(title)
+        section_img=(image)
+        section_body=(excerpt words="100")
+        section_postbody='&hellip;'
+        section_url=(url)
+        section_button='Read more'
+        section_date=(date format='Do MMMM YYYY')
+    }}
+{{/foreach}}
+
+{{ pagination }}
