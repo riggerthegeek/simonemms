@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+    <head>
+        {{!-- Document Settings --}}
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        {{!-- Page Meta --}}
+        <title>{{meta_title}}</title>
+        <meta name="description" content="{{meta_description}}" />
+
+        {{!-- Mobile Meta --}}
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {{!-- Brand icon --}}
+        <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+        {{!-- Styles'n'Scripts --}}
+        <!--[if lte IE 8]><script src="{{ asset "js/ie/html5shiv.js" }}"></script><![endif]-->
+        <link rel="stylesheet" href="{{ asset "css/main.css" }}" />
+        <!--[if lte IE 8]><link rel="stylesheet" href="{{ asset "css/ie8.css" }}" /><![endif]-->
+        <link rel="stylesheet" href="{{ asset "js/darcula.min.css" }}" />
+
+        {{!-- Ghost outputs important style and meta data with this tag --}}
+        {{ghost_head}}
+
+    </head>
+
+    <body id="top">
+
+        <header id="header" style="background-image: url('{{ asset "css/images/overlay.png" }}'){{#if @blog.cover}}, url('{{@blog.cover}}'){{/if}}">
+            <div class="inner">
+                <a href="{{ @blog.url }}" class="image avatar">
+                    <img src="{{ @blog.logo }}" alt="{{ @blog.title }}" />
+                </a>
+
+                <h1>
+                    <strong>{{ @blog.title }}</strong><br />
+                    {{ @blog.description }}
+                </h1>
+            </div>
+        </header>
+
+        <footer id="footer">
+            <div class="inner">
+                <ul class="icons">
+                    <li>
+                        <a
+                            href="https://twitter.com/riggerthegeek"
+                            target="_blank"
+                            title="Twitter"
+                            class="icon">
+                            <i class="fa fa-2x fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://github.com/riggerthegeek"
+                            target="_blank"
+                            title="GitHub"
+                            class="icon">
+                            <i class="fa fa-2x fa-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.linkedin.com/in/simonemms"
+                            target="_blank"
+                            title="LinkedIn"
+                            class="icon">
+                            <i class="fa fa-2x fa-linkedin-square"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://facebook.com/riggerthegeek"
+                            target="_blank"
+                            title="Facebook"
+                            class="icon">
+                            <i class="fa fa-2x fa-facebook-official"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#contact"
+                            title="Contact"
+                            class="icon">
+                            <i class="fa fa-2x fa-envelope-o"></i>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="copyright">
+                    <li>
+                        &copy; {{ @blog.title }}
+                    </li>
+                    <li>
+                        Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="{{ asset "js/highlight.min.js" }}"></script>
+        <script src="{{ asset "js/jquery.min.js" }}"></script>
+        <script src="{{ asset "js/jquery.poptrox.min.js" }}"></script>
+        <script src="{{ asset "js/skel.min.js" }}"></script>
+        <script src="{{ asset "js/util.js" }}"></script>
+        <!--[if lte IE 8]><script src="{{ asset "js/ie/respond.min.js" }}"></script><![endif]-->
+        <script src="{{ asset "js/main.js" }}"></script>
+
+        <script>hljs.initHighlightingOnLoad();</script>
+
+    </body>
+
+</html>
