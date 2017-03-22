@@ -44,7 +44,10 @@
                 {{/if}}
 
                 <h1>
-                    <strong>{{ @blog.title }}</strong><br />
+                    <a href="{{ @blog.url }}" class="image">
+                        <strong>{{ @blog.title }}</strong>
+                    </a>
+                    <br />
                     {{ @blog.description }}
                 </h1>
             </div>
