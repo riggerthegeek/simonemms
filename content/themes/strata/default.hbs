@@ -37,9 +37,11 @@
 
         <header id="header" style="background-image: url('{{ asset "css/images/overlay.png" }}'){{#if @blog.cover}}, url('{{@blog.cover}}'){{/if}}">
             <div class="inner">
-                <a href="{{ @blog.url }}" class="image avatar">
-                    <img src="{{ @blog.logo }}" alt="{{ @blog.title }}" />
-                </a>
+                {{#if @blog.logo}}
+                    <a href="{{ @blog.url }}" class="image avatar">
+                        <img src="{{ @blog.logo }}" alt="{{ @blog.title }}" />
+                    </a>
+                {{/if}}
 
                 <h1>
                     <strong>{{ @blog.title }}</strong><br />
