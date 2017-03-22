@@ -4,28 +4,65 @@
         Get In Touch
     </h2>
 
-    <div class="row">
-        <div class="8u 12u$(small)">
-            <form method="post" action="">
-                <div class="row uniform 50%">
-                    <div class="6u 12u$(xsmall)">
-                        <input type="text" required="required" name="name" id="name" placeholder="Name" />
-                    </div>
-                    <div class="6u$ 12u$(xsmall)">
-                        <input type="email" required="required" name="email" id="email" placeholder="Email" />
-                    </div>
-                    <div class="12u$">
-                        <textarea name="message" required="required" id="message" placeholder="Message" rows="4"></textarea>
-                    </div>
-                </div>
+    {{!-- Email subscribe form at the bottom of the page --}}
+    {{#if @labs.subscribers}}
+        <section class="gh-subscribe">
+            <h3 class="gh-subscribe-title">Subscribe to {{@blog.title}}</h3>
+            <p>Get the latest posts delivered right to your inbox.</p>
+            {{ subscribe_form
+                placeholder="Your email address"
+                button_class='button' input_class='content'}}
+            <span class="gh-subscribe-rss">or subscribe <a href="http://cloud.feedly.com/#subscription/feed/{{@blog.url}}/rss/">via RSS</a> with Feedly!</span>
+        </section>
+    {{/if}}
 
-                <ul class="actions">
-                    <li>
-                        <br />
-                        <input type="submit" value="Send Message" />
-                    </li>
-                </ul>
-            </form>
+    <div class="row">
+        <!--<div class="8u 12u$(small)">-->
+            <!--<form method="post" action="">-->
+                <!--<div class="row uniform 50%">-->
+                    <!--<div class="6u 12u$(xsmall)">-->
+                        <!--<input type="text" required="required" name="name" id="name" placeholder="Name" />-->
+                    <!--</div>-->
+                    <!--<div class="6u$ 12u$(xsmall)">-->
+                        <!--<input type="email" required="required" name="email" id="email" placeholder="Email" />-->
+                    <!--</div>-->
+                    <!--<div class="12u$">-->
+                        <!--<textarea name="message" required="required" id="message" placeholder="Message" rows="4"></textarea>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--<ul class="actions">-->
+                    <!--<li>-->
+                        <!--<br />-->
+                        <!--<input type="submit" value="Send Message" />-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</form>-->
+        <!--</div>-->
+
+        <div class="4u$ 12u$(small)">
+            <ul class="labeled-icons">
+                <li>
+                    <h3 class="icon fa-skype">
+                        <span class="label">Address</span>
+                    </h3>
+                    <a href="skype:RiggerTheGeek?chat">
+                        RiggerTheGeek
+                    </a>
+                </li>
+                <li>
+                    <h3 class="icon fa-mobile">
+                        <span class="label">Phone</span>
+                    </h3>
+                    07736 650058
+                </li>
+                <li>
+                    <h3 class="icon fa-envelope-o">
+                        <span class="label">Email</span>
+                    </h3>
+                    simon@simonemms.com
+                </li>
+            </ul>
         </div>
     </div>
 
