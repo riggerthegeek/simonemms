@@ -13,10 +13,13 @@
             {{/if}}
         </h2>
 
-        {{#if section_date}}
-            <span class="date content">{{ section_date }}</span>
-        {{/if}}
     </header>
+
+    {{#if section_date}}
+        <div class="date content">
+            {{ section_date }}
+        </div>
+    {{/if}}
 
     {{# if section_img }}
         <div class="content">
