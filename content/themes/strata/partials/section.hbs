@@ -15,11 +15,18 @@
 
     </header>
 
-    {{#if section_date}}
-        <div class="date content">
-            {{ section_date }}
-        </div>
-    {{/if}}
+    <div class="row">
+        {{#if section_date}}
+            <span class="date content">
+                {{ section_date }}
+            </span>
+        {{/if}}
+        {{#if section_tags}}
+            <span class="data content">
+                {{ section_tags }}
+            </span>
+        {{/if}}
+    </div>
 
     {{# if section_img }}
         <div class="content">

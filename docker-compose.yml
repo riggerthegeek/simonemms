@@ -7,3 +7,5 @@ services:
       - '9999:9999'
     volumes:
       - .:/opt/app
+    environment:
+      - GHOST_SQLITE_DEBUG=false
