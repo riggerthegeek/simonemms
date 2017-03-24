@@ -123,8 +123,31 @@
         <script src="{{ asset "js/util.js" }}"></script>
         <!--[if lte IE 8]><script src="{{ asset "js/ie/respond.min.js" }}"></script><![endif]-->
         <script src="{{ asset "js/main.js" }}"></script>
+        <script src="{{ asset "js/clipboard.min.js" }}"></script>
 
         <script>hljs.initHighlightingOnLoad();</script>
+
+        <script>
+            $('pre code').each(function () {
+                var text = $(this).html();
+
+                var copyButton = $('<button class="copyButton">Copy</button>')
+                    .attr('data-clipboard-text', text);
+
+                var originalText = copyButton.html();
+
+                $(this).parents('pre')
+                    .append(copyButton)
+                    .click(function () {
+                        $(copyButton).html('Copied');
+                        setInterval(function () {
+                            $(copyButton).html(originalText);
+                        }, 5000);
+                    })
+            });
+
+            new Clipboard('.copyButton');
+        </script>
 
         {{ ghost_foot }}
 

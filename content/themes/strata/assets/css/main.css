@@ -3157,3 +3157,32 @@ a {
 .pagination > li {
     display: inline;
 }
+
+pre {
+    position: relative;
+}
+
+.copyButton {
+    position: absolute;
+    top: 2px;
+    right: 6px;
+    z-index: 99999;
+
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background: none;
+    border: 1px solid #444;
+    white-space: nowrap;
+    padding: 9px;
+    color: #999;
+    border-bottom-left-radius: 4px;
+}
+
+.copyButton:hover {
+    background: #333;
+}
